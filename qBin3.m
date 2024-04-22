@@ -18,11 +18,11 @@ function qBin3(object_number_i_f)
     traj_goal = convert2ROSPointVec(qBin,ros_cur_jnt_state_msg.Name,1,1,traj_goal);
 
     if waitForServer(pick_traj_act_client)
-        disp('Connected to action server. Sending Robot to "q_ready"...')
+        disp('Connected to action server. Sending Robot to "q_Bin"...')
         pause(1)
         [res,state,status] = sendGoalAndWait(pick_traj_act_client,traj_goal);
     else
-        disp('First try failed... Trying again... Sending Robot to "q_ready"');
+        disp('First try failed... Trying again... Sending Robot to "q_Bin"');
         pause(1)
         [res,state,status] = sendGoalAndWait(pick_traj_act_client,traj_goal);
     end

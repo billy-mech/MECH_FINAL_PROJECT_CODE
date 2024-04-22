@@ -42,64 +42,82 @@ yBottle4_number = 39;  % horizontal
 disp('Hello User! Starting Robot...')
 pause(1)
 
+% loading environment
+disp('Loading Environment...')
+env = Test_Envir();
+% taking all objects from the env cell array, and placing them into the new
+%   environment cell array, effectively removing all non-collision-box 
+%   objects
+env_new = {};
+for i = 1:numel(env)
+    if ~isa(env{i}, 'double')
+        env_new{end+1} = env{i};
+    end
+end
+disp('Environment Complete.')
+pause(1)
+
+% qBin to start (currently unnecessary)
+% qBin3(rCan1_number)
+
 % cans (green bin)
-individualArmRound2(rCan1_number)
+individualArmRound2(rCan1_number, env_new)  % approved
 pause(1)
-individualArmRound2(rCan2_number)
+individualArmRound2(rCan2_number, env_new)  % approved
 pause(1)
-individualArmRound2(rCan3_number)
+individualArmRound2(rCan3_number, env_new)  % approved
 pause(1)
-individualArmRound2(yCan1_number) 
+individualArmRound2(yCan1_number, env_new)  % approved
 pause(1)
-individualArmRound2(yCan2_number)  % (horizontal)
+individualArmRound2(yCan2_number, env_new)  % (horizontal) approved
 pause(1)
-individualArmRound2(yCan3_number) 
+individualArmRound2(yCan3_number, env_new)  % approved
 pause(1)
-individualArmRound2(yCan4_number) %  (horizontal)
+individualArmRound2(yCan4_number, env_new) %  (horizontal) approved
 pause(1)
-individualArmRound2(gCan1_number)  % (horizontal)
+individualArmRound2(gCan1_number, env_new)  % approved
 pause(1)
-individualArmRound2(gCan2_number)  
+individualArmRound2(gCan2_number, env_new)  % (horizontal) approved
 pause(1)
-individualArmRound2(gCan3_number)
+individualArmRound2(gCan3_number, env_new)  
 pause(1)
-individualArmRound2(gCan4_number)
+individualArmRound2(gCan4_number, env_new)  % approved
 pause(1)
 
 % bottles (blue bin)
-individualArmRound2(rBottle1_number)  % (horizontal)
+individualArmRound2(rBottle1_number, env_new)  % (horizontal) approved
 pause(1)
-individualArmRound2(rBottle2_number)  % (horizontal)
+individualArmRound2(rBottle2_number, env_new)  % (horizontal) approved
 pause(1)
-individualArmRound2(bBottle1_number)
+individualArmRound2(bBottle1_number, env_new)
 pause(1)
-individualArmRound2(bBottle2_number) 
+individualArmRound2(bBottle2_number, env_new)  % approved
 pause(1)
-individualArmRound2(bBottle3_number)  % (horizontal)
+individualArmRound2(bBottle3_number, env_new)  % (horizontal) approved, stuck
 pause(1)
-individualArmRound2(yBottle1_number)
+individualArmRound2(yBottle1_number, env_new)  % approved
 pause(1)
-individualArmRound2(yBottle2_number)
+individualArmRound2(yBottle2_number, env_new)  % approved
 pause(1)
-individualArmRound2(yBottle3_number) 
+individualArmRound2(yBottle3_number, env_new)  % approved
 pause(1)
-individualArmRound2(yBottle4_number)  % (horizontal)
+individualArmRound2(yBottle4_number, env_new)  % (horizontal)
 pause(1)
 
 % pouches 
-individualArmRound2(pouch1)  
+individualArmRound2(pouch1, env_new)  % approved
 pause(1)
-individualArmRound2(pouch2)  
+individualArmRound2(pouch2, env_new)  % approved
 pause(1)
-individualArmRound2(pouch3)
+individualArmRound2(pouch3, env_new)  % approved
 pause(1)
-individualArmRound2(pouch4) 
+individualArmRound2(pouch4, env_new) 
 pause(1)
-individualArmRound2(pouch5)  
+individualArmRound2(pouch5, env_new)  
 pause(1)
-individualArmRound2(pouch6)
+individualArmRound2(pouch6, env_new)
 pause(1)
-individualArmRound2(pouch7)
+individualArmRound2(pouch7, env_new)
 pause(1)
-individualArmRound2(pouch8) 
+individualArmRound2(pouch8, env_new) 
 pause(1)
