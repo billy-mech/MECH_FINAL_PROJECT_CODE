@@ -1,7 +1,12 @@
 % =========================================================================
 % This is the Mechatronics Final Project MAIN Code
+% Inputs:
+% None
+% Outputs:
+% None
 % This is the MAIN matlab file that will be calling the
-%       individual_arm_round.m function (which calls many functions itself)
+%       Test_Envir.m function (which makes the environment for the robot to avoid)
+%       individualArmRound2.m function (which calls many functions itself)
 % Make sure to initialize ROS before beginning the program
 % RRT :)
 % =========================================================================

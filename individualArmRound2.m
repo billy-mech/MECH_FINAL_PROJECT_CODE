@@ -1,5 +1,14 @@
-% this function is called by main_level1.m
-% it is in charge of performing one round (pick up and drop) for the arm
+% =========================================================================
+% This is the Mechatronics Final Project Secondary Code
+% Inputs:
+% object_number (double) - number of the object to be sorted
+% env_i_f {cell} - environment of collision boxes
+% There are no Outputs
+% This is the matlab file that will be calling:
+%       lift3 (Increases the z-position of mat_current by z_offset)
+%       moveTo3 (this function moves the arm to a specified transformation matrix)
+% 	    gripperManualUse3 (it controls the gripper to open or close by the specified argument)
+% =========================================================================
 
 function individualArmRound2(object_number, env_i_f)
 

@@ -1,5 +1,12 @@
-% this function is called by individualArmRound2.m
+% =========================================================================
 % it controls the gripper to open or close by the specified argument
+%
+% Inputs:
+% 	gripper_distance_value - Number between 0 and 0.8 that sets the gripper value
+%
+% Output
+% 	None
+% =========================================================================
 
 function gripperManualUse3(gripper_distance_value)
     grip_action_client = rosactionclient('/gripper_controller/follow_joint_trajectory', ...

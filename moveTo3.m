@@ -1,5 +1,14 @@
-% this function is called by individualArmRound2
-% this function moves the arm to a specified transformation matrix
+% =========================================================================
+% This is the Mechatronics Final Project Tertiary Code
+% Moves the robot from one position to another using RRT.
+% Inputs:
+% 	mat_R_T_M (n x q) - matrix of n trajectory points for q joint values between the robot and the select model
+% 	ops (dictionary) - set of options that bound different values such as z_offset and traj_duration
+% Outputs:
+%	traj_result - resulting set of trajectory points between the robot and the select model
+%	state - current state of the robot (where the robot currently is)
+%	status - success or failure based on position
+% =========================================================================
 
 function traj_result = moveTo3(mat_R_T_M,ops)
     ur5e = loadrobot("universalUR5e",DataFormat="row");
